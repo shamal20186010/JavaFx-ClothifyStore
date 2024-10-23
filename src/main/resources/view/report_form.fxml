@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane prefHeight="580.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="580.0" layoutX="-1.0" stroke="BLACK" strokeType="INSIDE" width="800.0">
+         <fill>
+            <LinearGradient endX="0.8672985781990521" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9450980424880981" green="0.7686274647712708" blue="0.05882352963089943" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.006711409395973154">
+                     <color>
+                        <Color red="0.8117647171020508" green="0.9215686321258545" blue="0.8666666746139526" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8117647171020508" green="0.9215686321258545" blue="0.8666666746139526" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ComboBox fx:id="cmbReports" layoutX="57.0" layoutY="129.0" prefHeight="51.0" prefWidth="143.0" promptText="Reports" />
+   </children>
+</AnchorPane>

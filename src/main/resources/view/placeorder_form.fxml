@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="579.0" prefWidth="801.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlaceorderFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="579.0" stroke="BLACK" strokeType="INSIDE" width="800.0">
+         <fill>
+            <LinearGradient endX="0.8672985781990521" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9450980424880981" green="0.7686274647712708" blue="0.05882352963089943" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.009403199436349994">
+                     <color>
+                        <Color red="0.8117647171020508" green="0.9215686321258545" blue="0.8666666746139526" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8117647171020508" green="0.9215686321258545" blue="0.8666666746139526" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <JFXTextField fx:id="txtName" focusColor="BLACK" labelFloat="true" layoutX="377.0" layoutY="186.0" prefHeight="35.0" prefWidth="152.0" promptText="Name" unFocusColor="#3c8962">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPrice" focusColor="BLACK" labelFloat="true" layoutX="213.0" layoutY="253.0" prefHeight="35.0" prefWidth="152.0" promptText="Price" unFocusColor="#3c8962">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCategory" focusColor="BLACK" labelFloat="true" layoutX="36.0" layoutY="253.0" prefHeight="35.0" prefWidth="117.0" promptText="Category" unFocusColor="#3c8962">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtQty" focusColor="BLACK" labelFloat="true" layoutX="400.0" layoutY="253.0" prefHeight="35.0" prefWidth="107.0" promptText="Qty" unFocusColor="#3c8962">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+      </JFXTextField>
+      <TableView fx:id="tblEmployees" layoutX="14.0" layoutY="344.0" prefHeight="201.0" prefWidth="495.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="53.0" text="ID" />
+            <TableColumn fx:id="colName" prefWidth="154.0" text="NAME" />
+            <TableColumn fx:id="colQty" prefWidth="62.0" text="QTY" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="124.0" text="UNIT PRICE" />
+            <TableColumn fx:id="colTotal" prefWidth="101.0" text="TOTAL" />
+         </columns>
+      </TableView>
+      <JFXButton layoutX="587.0" layoutY="235.0" onAction="#btnAddOnAction" prefHeight="36.0" prefWidth="152.0" style="-fx-background-color: #3C8962;" text="Add" textAlignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arial" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="587.0" layoutY="490.0" onAction="#btnUpdateOnAction" prefHeight="36.0" prefWidth="152.0" style="-fx-background-color: #3C8962;" text="Place Order" textAlignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arial" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="587.0" layoutY="446.0" onAction="#btnDeleteOnAction" prefHeight="36.0" prefWidth="152.0" style="-fx-background-color: #3C8962;" text="Delete" textAlignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arial" size="19.0" />
+         </font>
+      </JFXButton>
+      <Line endX="707.0000610351562" layoutX="93.0" layoutY="319.0" startX="-100.0" />
+      <Label layoutX="36.0" layoutY="214.0" text="Order Id: ">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblId" layoutX="123.0" layoutY="215.0" prefHeight="23.0" prefWidth="58.0" text="ID">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="582.0" layoutY="47.0" text="Date: ">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="582.0" layoutY="76.0" text="Time: ">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="628.0" layoutY="47.0" text="dd/mm/yyyy">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="633.0" layoutY="76.0" text="hh:mm:ss">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbItemCode" layoutX="213.0" layoutY="191.0" promptText="Item Code" />
+      <Label layoutX="36.0" layoutY="170.0" prefHeight="23.0" prefWidth="78.0" text="Emp Id: ">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblEmpId" layoutX="123.0" layoutY="170.0" prefHeight="23.0" prefWidth="58.0" text="ID">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="590.0" layoutY="344.0" text="Net Total:">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotal" layoutX="679.0" layoutY="344.0" text="0.00">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="587.0" layoutY="402.0" onAction="#btnUpdateOnAction" prefHeight="36.0" prefWidth="152.0" style="-fx-background-color: #3C8962;" text="Update" textAlignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arial" size="19.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
