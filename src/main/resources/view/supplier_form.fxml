@@ -39,12 +39,12 @@
             </LinearGradient>
          </fill>
       </Rectangle>
-      <JFXTextField fx:id="txtName" focusColor="BLACK" labelFloat="true" layoutX="245.0" layoutY="212.0" prefHeight="36.0" prefWidth="210.0" promptText="Name" unFocusColor="#3c8962">
+      <JFXTextField fx:id="txtName" focusColor="BLACK" labelFloat="true" layoutX="74.0" layoutY="213.0" prefHeight="36.0" prefWidth="210.0" promptText="Name" unFocusColor="#3c8962">
          <font>
             <Font name="Arial" size="19.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtEmail" focusColor="BLACK" labelFloat="true" layoutX="516.0" layoutY="212.0" prefHeight="36.0" prefWidth="210.0" promptText="Email" unFocusColor="#3c8962">
+      <JFXTextField fx:id="txtEmail" focusColor="BLACK" labelFloat="true" layoutX="333.0" layoutY="213.0" prefHeight="36.0" prefWidth="210.0" promptText="Email" unFocusColor="#3c8962">
          <font>
             <Font name="Arial" size="19.0" />
          </font>
@@ -59,16 +59,16 @@
             <Font name="Arial" size="19.0" />
          </font>
       </JFXTextField>
-      <TableView fx:id="tblSupplier" layoutX="27.0" layoutY="339.0" prefHeight="200.0" prefWidth="495.0">
+      <TableView fx:id="tblSupplier" layoutX="27.0" layoutY="339.0" prefHeight="200.0" prefWidth="518.0">
          <columns>
             <TableColumn fx:id="colId" prefWidth="53.0" text="ID" />
             <TableColumn fx:id="colName" prefWidth="98.0" text="NAME" />
-            <TableColumn fx:id="colEmail" prefWidth="132.0" text="EMAIL" />
-            <TableColumn fx:id="colCompany" prefWidth="103.0" text="COMPANY" />
-            <TableColumn fx:id="colItem" prefWidth="108.0" text="ITEM" />
+            <TableColumn fx:id="colEmail" prefWidth="159.199951171875" text="EMAIL" />
+            <TableColumn fx:id="colCompany" prefWidth="93.60003662109375" text="COMPANY" />
+            <TableColumn fx:id="colItem" prefWidth="112.800048828125" text="ITEM" />
          </columns>
       </TableView>
-      <JFXButton layoutX="583.0" layoutY="275.0" onAction="#btnAddOnAction" prefHeight="36.0" prefWidth="139.0" style="-fx-background-color: #3C8962;" text="Add" textAlignment="CENTER">
+      <JFXButton layoutX="583.0" layoutY="253.0" onAction="#btnAddOnAction" prefHeight="36.0" prefWidth="139.0" style="-fx-background-color: #3C8962;" text="Add" textAlignment="CENTER">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -93,12 +93,12 @@
          </font>
       </JFXButton>
       <Line endX="703.0000610351562" layoutX="97.0" layoutY="327.0" startX="-100.0" />
-      <Label fx:id="lblId" layoutX="152.0" layoutY="218.0" prefHeight="23.0" prefWidth="59.0" text="ID">
+      <Label fx:id="lblId" layoutX="150.0" layoutY="149.0" prefHeight="23.0" prefWidth="59.0" text="ID">
          <font>
             <Font name="Arial" size="19.0" />
          </font>
       </Label>
-      <Label layoutX="50.0" layoutY="218.0" text="Supplier Id: ">
+      <Label layoutX="48.0" layoutY="149.0" text="Supplier Id: ">
          <font>
             <Font name="Arial" size="19.0" />
          </font>

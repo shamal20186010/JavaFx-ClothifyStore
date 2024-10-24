@@ -4,17 +4,22 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import dto.Employee;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import service.ServiceFactory;
 import service.custom.EmployeeService;
 import util.ServiceType;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -106,6 +111,17 @@ public class EmployeesFormController implements Initializable {
     }
 
     @FXML
+    void btnCreateAccountOnAction(ActionEvent event) {
+        Stage stage = new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/dashboard_form.fxml"))));
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @FXML
     void btnUpdateOnAction() {
         Employee employee = new Employee(
                 lblId.getText(),
@@ -138,13 +154,14 @@ public class EmployeesFormController implements Initializable {
         txtContact.setText("");
     }
 
-    private void loadTable(){
-        try{
+    private void loadTable() {
+        try {
             ObservableList<Employee> employeesList = service.getAll();
             tblEmployees.setItems(employeesList);
-        }catch (NullPointerException e){
-            new Alert(Alert.AlertType.ERROR,e.getMessage()).show();
+        } catch (NullPointerException e) {
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
         }
     }
+
 
 }

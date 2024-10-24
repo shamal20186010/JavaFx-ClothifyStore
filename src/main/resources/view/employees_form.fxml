@@ -39,22 +39,22 @@
             </LinearGradient>
          </fill>
       </Rectangle>
-      <JFXTextField fx:id="txtName" focusColor="BLACK" labelFloat="true" layoutX="314.0" layoutY="194.0" prefHeight="36.0" prefWidth="131.0" promptText="Name" unFocusColor="#3c8962">
+      <JFXTextField fx:id="txtName" focusColor="BLACK" labelFloat="true" layoutX="116.0" layoutY="195.0" prefHeight="36.0" prefWidth="210.0" promptText="Name" unFocusColor="#3c8962">
          <font>
             <Font name="Arial" size="19.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtEmail" focusColor="BLACK" labelFloat="true" layoutX="490.0" layoutY="195.0" prefHeight="25.0" prefWidth="210.0" promptText="Email" unFocusColor="#3c8962">
+      <JFXTextField fx:id="txtEmail" focusColor="BLACK" labelFloat="true" layoutX="371.0" layoutY="196.0" prefHeight="25.0" prefWidth="210.0" promptText="Email" unFocusColor="#3c8962">
          <font>
             <Font name="Arial" size="19.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtCompany" focusColor="BLACK" labelFloat="true" layoutX="170.0" layoutY="256.0" prefHeight="25.0" prefWidth="210.0" promptText="Company" unFocusColor="#3c8962">
+      <JFXTextField fx:id="txtCompany" focusColor="BLACK" labelFloat="true" layoutX="117.0" layoutY="257.0" prefHeight="25.0" prefWidth="210.0" promptText="Company" unFocusColor="#3c8962">
          <font>
             <Font name="Arial" size="19.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtContact" focusColor="BLACK" labelFloat="true" layoutX="432.0" layoutY="256.0" prefHeight="25.0" prefWidth="210.0" promptText="Contact" unFocusColor="#3c8962">
+      <JFXTextField fx:id="txtContact" focusColor="BLACK" labelFloat="true" layoutX="371.0" layoutY="257.0" prefHeight="35.0" prefWidth="210.0" promptText="Contact" unFocusColor="#3c8962">
          <font>
             <Font name="Arial" size="19.0" />
          </font>
@@ -68,7 +68,7 @@
             <TableColumn fx:id="colContact" prefWidth="108.0" text="CONTACT" />
         </columns>
       </TableView>
-      <JFXButton fx:id="btnAdd" layoutX="679.0" layoutY="256.0" onAction="#btnAddOnAction" prefHeight="35.0" prefWidth="91.0" style="-fx-background-color: #3C8962;" text="Add" textAlignment="CENTER">
+      <JFXButton fx:id="btnAdd" layoutX="645.0" layoutY="231.0" onAction="#btnAddOnAction" prefHeight="35.0" prefWidth="110.0" style="-fx-background-color: #3C8962;" text="Add" textAlignment="CENTER">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -76,7 +76,7 @@
             <Font name="Arial" size="19.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="582.0" layoutY="383.0" onAction="#btnUpdateOnAction" prefHeight="35.0" prefWidth="155.0" style="-fx-background-color: #3C8962;" text="Update" textAlignment="CENTER">
+      <JFXButton layoutX="582.0" layoutY="400.0" onAction="#btnUpdateOnAction" prefHeight="35.0" prefWidth="155.0" style="-fx-background-color: #3C8962;" text="Update" textAlignment="CENTER">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -84,7 +84,7 @@
             <Font name="Arial" size="19.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="582.0" layoutY="463.0" onAction="#btnDeleteOnAction" prefHeight="35.0" prefWidth="155.0" style="-fx-background-color: #3C8962;" text="Delete" textAlignment="CENTER">
+      <JFXButton layoutX="582.0" layoutY="458.0" onAction="#btnDeleteOnAction" prefHeight="35.0" prefWidth="155.0" style="-fx-background-color: #3C8962;" text="Delete" textAlignment="CENTER">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -93,22 +93,22 @@
          </font>
       </JFXButton>
       <Line endX="702.0" layoutX="100.0" layoutY="309.0" startX="-100.0" />
-      <Label fx:id="lblId" layoutX="145.0" layoutY="201.0" prefHeight="23.0" prefWidth="60.0" text="ID">
+      <Label fx:id="lblId" layoutX="145.0" layoutY="147.0" prefHeight="23.0" prefWidth="60.0" text="ID">
          <font>
             <Font name="Arial" size="19.0" />
          </font>
       </Label>
-      <Label layoutX="29.0" layoutY="201.0" text="Employee Id: ">
+      <Label layoutX="29.0" layoutY="147.0" text="Employee Id: ">
          <font>
             <Font name="Arial" size="19.0" />
          </font>
       </Label>
-      <JFXButton fx:id="btnRefresh" layoutX="213.0" layoutY="194.0" onAction="#btnAddOnAction" prefHeight="36.0" prefWidth="22.0" style="-fx-background-color: #3C8962;" text="r" textAlignment="CENTER">
+      <JFXButton layoutX="562.0" layoutY="347.0" onAction="#btnCreateAccountOnAction" prefHeight="35.0" prefWidth="195.0" style="-fx-background-color: #51DC23;" text="Create Account" textAlignment="CENTER">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
          <font>
-            <Font name="Arial Bold" size="19.0" />
+            <Font name="Arial" size="19.0" />
          </font>
       </JFXButton>
    </children>

@@ -20,10 +20,11 @@ public class LoginServiceImpl implements LoginService {
     public LoginEntity createLogin(String username, String password) {
         Session session = HibernateUtil.getSession().getSessionFactory().openSession();
         try {
+            System.out.println(username+" "+password);
             Query<LoginEntity> query = session.createQuery("FROM loginentity WHERE email = :username AND password = :password", LoginEntity.class);
             query.setParameter("email", username);
             query.setParameter("password", password);
-            System.out.println(username,password);
+            System.out.println(username+" "+password);
             return query.uniqueResult(); // Return user if found, otherwise null
         } finally {
             session.close();
@@ -37,10 +38,10 @@ public class LoginServiceImpl implements LoginService {
     }
 
     @Override
-    public boolean verifyLogin(Login login) {
+    public LoginEntity verifyLogin(Login login) {
         LoginEntity entity = new ModelMapper().map(login,LoginEntity.class);
         LoginEntity search = loginDao.search(login.getEmail());
-        return (String.valueOf(entity)).equals(String.valueOf(search));
+        return (search);
     }
 
     @Override

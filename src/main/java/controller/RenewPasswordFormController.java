@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import service.ServiceFactory;
 import service.custom.LoginService;
@@ -20,6 +21,9 @@ public class RenewPasswordFormController {
     private JFXButton btnSubmit;
 
     @FXML
+    private AnchorPane scenePane;
+
+    @FXML
     private JFXTextField txtConfirmPassword;
 
     @FXML
@@ -27,7 +31,11 @@ public class RenewPasswordFormController {
 
     @FXML
     void btnCancelOnAction(ActionEvent event) {
-
+//        try {
+//            scenePane = FXMLLoader.load(getClass().getResource("../view/login_form.fxml"));
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
     }
 
     @FXML

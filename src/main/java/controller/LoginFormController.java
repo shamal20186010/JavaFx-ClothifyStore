@@ -17,13 +17,14 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import service.ServiceFactory;
 import service.custom.LoginService;
+import service.custom.impl.LoginServiceImpl;
 import util.ServiceType;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class LoginFormController implements Initializable {
+public class LoginFormController {
 
     @FXML
     private AnchorPane scenePane;
@@ -47,49 +48,52 @@ public class LoginFormController implements Initializable {
 
         String username = txtEmail.getText();
         String password = txtPassword.getText();
-
-        LoginEntity user = service.createLogin(username, password);
+        String role="";
 
         if (!hasEmptyFields()) {
-            boolean isValidLogin = service.verifyLogin(
+            LoginEntity isValidLogin = service.verifyLogin(
                     new Login(
-                        txtEmail.getText(),
-                        txtPassword.getText()
-            ));
+                            txtEmail.getText(),
+                            txtPassword.getText(),
+                            role
+                    ));
 
-            if (isValidLogin){
-                if (user != null) {
-                    Stage stage = (Stage) scenePane.getScene().getWindow();
-                    if (user.getRole().equals("Admin")) {
-                        try {
-                            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/admin_user_form.fxml"))));
-                            stage.show();
-                            stage.setResizable(false);
+            if (isValidLogin != null) {
+                Stage stage = (Stage) scenePane.getScene().getWindow();
+                if (isValidLogin.getRole().equals("Admin")) {
+                    try {
+                        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/admin_user_form.fxml"))));
+                        stage.show();
+                        stage.setResizable(false);
 
-                        } catch (IOException e) {
-                            throw new RuntimeException(e);
-                        }
-                    } else if (user.getRole().equals("Employee")) {
-                        try {
-                            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/user_form.fxml"))));
-                            stage.show();
-                            stage.setResizable(false);
-                        } catch (IOException e) {
-                            throw new RuntimeException(e);
-                        }
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
                     }
-                }else {
-                    new Alert(Alert.AlertType.ERROR,"Please select job role!").show();
+                } else if (isValidLogin.getRole().equals("Employee")) {
+                    try {
+                        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/user_form.fxml"))));
+                        stage.show();
+                        stage.setResizable(false);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
                 }
-
-            }else {
-               Alert alert = new Alert(Alert.AlertType.ERROR,"Incorrect Email or Password");
-               alert.setHeaderText("Login Failed!");
-               alert.show();
+            } else {
+                showAlert("Login Failed", "Invalid username or password!");
             }
-        }else {
-            new Alert(Alert.AlertType.ERROR,"Please fill the empty input fields!!").show();
+        } else {
+            showAlert("EmptyField", "Please fill the empty input fields!!");
         }
+
+
+    }
+
+    private void showAlert(String title, String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 
     private boolean hasEmptyFields() {
@@ -106,24 +110,5 @@ public class LoginFormController implements Initializable {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    @FXML
-    void lnkCreateAccountOnAction(ActionEvent actionEvent) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/dashboard_form.fxml"))));
-            stage.show();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        ObservableList<String> roles = FXCollections.observableArrayList();
-        roles.add("Admin");
-        roles.add("Employee");
-        cmbPosition.setItems(roles);
     }
 }

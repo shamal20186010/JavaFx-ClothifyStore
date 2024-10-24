@@ -40,22 +40,22 @@
             </LinearGradient>
          </fill>
       </Rectangle>
-      <JFXTextField fx:id="txtName" focusColor="BLACK" labelFloat="true" layoutX="377.0" layoutY="186.0" prefHeight="35.0" prefWidth="152.0" promptText="Name" unFocusColor="#3c8962">
+      <JFXTextField fx:id="txtName" focusColor="BLACK" labelFloat="true" layoutX="175.0" layoutY="203.0" prefHeight="35.0" prefWidth="238.0" promptText="Name" unFocusColor="#3c8962">
          <font>
             <Font name="Arial Bold" size="19.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtPrice" focusColor="BLACK" labelFloat="true" layoutX="213.0" layoutY="253.0" prefHeight="35.0" prefWidth="152.0" promptText="Price" unFocusColor="#3c8962">
+      <JFXTextField fx:id="txtPrice" focusColor="BLACK" labelFloat="true" layoutX="175.0" layoutY="253.0" prefHeight="35.0" prefWidth="152.0" promptText="Price" unFocusColor="#3c8962">
          <font>
             <Font name="Arial Bold" size="19.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtCategory" focusColor="BLACK" labelFloat="true" layoutX="36.0" layoutY="253.0" prefHeight="35.0" prefWidth="117.0" promptText="Category" unFocusColor="#3c8962">
+      <JFXTextField fx:id="txtCategory" focusColor="BLACK" labelFloat="true" layoutX="36.0" layoutY="253.0" prefHeight="35.0" prefWidth="98.0" promptText="Category" unFocusColor="#3c8962">
          <font>
             <Font name="Arial Bold" size="19.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtQty" focusColor="BLACK" labelFloat="true" layoutX="400.0" layoutY="253.0" prefHeight="35.0" prefWidth="107.0" promptText="Qty" unFocusColor="#3c8962">
+      <JFXTextField fx:id="txtQty" focusColor="BLACK" labelFloat="true" layoutX="413.0" layoutY="253.0" prefHeight="35.0" prefWidth="107.0" promptText="Qty" unFocusColor="#3c8962">
          <font>
             <Font name="Arial Bold" size="19.0" />
          </font>
@@ -93,13 +93,13 @@
             <Font name="Arial" size="19.0" />
          </font>
       </JFXButton>
-      <Line endX="707.0000610351562" layoutX="93.0" layoutY="319.0" startX="-100.0" />
-      <Label layoutX="36.0" layoutY="214.0" text="Order Id: ">
+      <Line endX="707.0000610351562" layoutX="93.0" layoutY="319.0" startX="-93.0" />
+      <Label layoutX="36.0" layoutY="161.0" text="Order Id: ">
          <font>
             <Font name="Arial Bold" size="19.0" />
          </font>
       </Label>
-      <Label fx:id="lblId" layoutX="123.0" layoutY="215.0" prefHeight="23.0" prefWidth="58.0" text="ID">
+      <Label fx:id="lblId" layoutX="123.0" layoutY="162.0" prefHeight="23.0" prefWidth="58.0" text="ID">
          <font>
             <Font name="Arial Bold" size="19.0" />
          </font>
@@ -114,23 +114,23 @@
             <Font name="Arial Bold" size="19.0" />
          </font>
       </Label>
-      <Label fx:id="lblDate" layoutX="628.0" layoutY="47.0" text="dd/mm/yyyy">
+      <Label fx:id="lblDate" layoutX="635.0" layoutY="47.0" text="dd/mm/yyyy">
          <font>
             <Font name="Arial Bold" size="19.0" />
          </font>
       </Label>
-      <Label fx:id="lblTime" layoutX="633.0" layoutY="76.0" text="hh:mm:ss">
+      <Label fx:id="lblTime" layoutX="637.0" layoutY="76.0" prefHeight="22.0" prefWidth="98.0" text="hh:mm:ss">
          <font>
             <Font name="Arial Bold" size="19.0" />
          </font>
       </Label>
-      <JFXComboBox fx:id="cmbItemCode" layoutX="213.0" layoutY="191.0" promptText="Item Code" />
-      <Label layoutX="36.0" layoutY="170.0" prefHeight="23.0" prefWidth="78.0" text="Emp Id: ">
+      <JFXComboBox fx:id="cmbItemCode" layoutX="36.0" layoutY="203.0" prefHeight="35.0" prefWidth="98.0" promptText="Item Code" />
+      <Label layoutX="36.0" layoutY="117.0" prefHeight="23.0" prefWidth="78.0" text="Emp Id: ">
          <font>
             <Font name="Arial Bold" size="19.0" />
          </font>
       </Label>
-      <Label fx:id="lblEmpId" layoutX="123.0" layoutY="170.0" prefHeight="23.0" prefWidth="58.0" text="ID">
+      <Label fx:id="lblEmpId" layoutX="123.0" layoutY="117.0" prefHeight="23.0" prefWidth="58.0" text="ID">
          <font>
             <Font name="Arial Bold" size="19.0" />
          </font>
