@@ -40,27 +40,6 @@ public class DashboardFormController implements Initializable {
             throw new RuntimeException(e);
         }
     }
-
-    @FXML
-    void btnRegisterOnAction(ActionEvent event) {
-        LoginService service = ServiceFactory.getInstance().getServiceType(ServiceType.LOGIN);
-        if (!hasEmptyFields()) {
-            boolean isDone = service.createLogin(new Login(
-                    txtEmail.getText(),
-                    txtPassword.getText(),
-                    cmbPosition.getValue()
-                    )
-            );
-            if (isDone) {
-                new Alert(Alert.AlertType.INFORMATION,"Login created Successfully!!").show();
-            }else {
-                new Alert(Alert.AlertType.WARNING,"Failed to create login!!").show();
-            }
-        }else{
-            new Alert(Alert.AlertType.WARNING,"Empty Text Fields!").show();
-        }
-    }
-
     private boolean hasEmptyFields() {
         return txtEmail.getText().isEmpty() || txtPassword.getText().isEmpty();
     }

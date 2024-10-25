@@ -1,5 +1,6 @@
 package repository.custom.impl;
 
+import dto.OrderDetail;
 import entity.ProductEntity;
 import javafx.scene.control.Alert;
 import org.hibernate.Session;
@@ -38,7 +39,9 @@ public class ProductDaoImpl implements ProductDao {
         Transaction transaction = session.beginTransaction();
         try (session) {
             ProductEntity entity = search(id);
+            System.out.println(entity);
             if (entity != null) {
+                System.out.println("entity");
                 session.remove(entity);
             }
             transaction.commit();
@@ -83,5 +86,30 @@ public class ProductDaoImpl implements ProductDao {
     public ProductEntity search(String id) {
         Session session = HibernateUtil.getSession();
         return session.get(ProductEntity.class, id);
+    }
+
+    @Override
+    public boolean updateStocks(List<OrderDetail> orderDetails) {
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = session.beginTransaction();
+        try {
+            orderDetails.forEach(orderDetail -> {
+                ProductEntity product = session.get(ProductEntity.class, orderDetail.getItemCode());
+                if (product != null) {
+                    product.setQty(product.getQty() - orderDetail.getQty());
+                    session.merge(product);
+                    transaction.commit();
+
+                }
+            });
+            return true;
+        } catch (Exception e) {
+            if (null != transaction) {
+                new Alert(Alert.AlertType.ERROR, "Failed to Update record->" + e.getMessage()).show();
+                transaction.rollback();
+            }
+        }finally {
+            session.close();
+        }return false;
     }
 }

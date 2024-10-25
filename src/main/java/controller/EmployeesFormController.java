@@ -1,8 +1,10 @@
 package controller;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import dto.Employee;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -31,7 +33,7 @@ public class EmployeesFormController implements Initializable {
     private TableColumn<?, ?> colCompany;
 
     @FXML
-    private TableColumn<?, ?> colContact;
+    private TableColumn<?, ?> colConNo;
 
     @FXML
     private TableColumn<?, ?> colEmail;
@@ -41,6 +43,15 @@ public class EmployeesFormController implements Initializable {
 
     @FXML
     private TableColumn<?, ?> colName;
+
+    @FXML
+    private TableColumn<?, ?> colPassword;
+
+    @FXML
+    private TableColumn<?, ?> colRole;
+
+    @FXML
+    private JFXComboBox<String> cooRole;
 
     @FXML
     private Label lblId;
@@ -60,16 +71,20 @@ public class EmployeesFormController implements Initializable {
     @FXML
     private JFXTextField txtName;
 
+    @FXML
+    private JFXTextField txtPassword;
+
     EmployeeService service = ServiceFactory.getInstance().getServiceType(ServiceType.EMPLOYEE);
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
         lblId.setText(service.generateId());
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colCompany.setCellValueFactory(new PropertyValueFactory<>("company"));
         colEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
-        colContact.setCellValueFactory(new PropertyValueFactory<>("contact"));
+        colConNo.setCellValueFactory(new PropertyValueFactory<>("contact"));
         tblEmployees.getSelectionModel().selectedItemProperty().addListener(((observableValue, oldValue, newValue) ->
         {
             if (null != newValue) {

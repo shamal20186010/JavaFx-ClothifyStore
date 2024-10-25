@@ -1,14 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.ProfileFormController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="580.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProfileFormController">
+   <children>
+      <AnchorPane prefHeight="580.0" prefWidth="800.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cfebdd" height="580.0" stroke="BLACK" strokeType="INSIDE" width="800.0">
+               <effect>
+                  <DropShadow />
+               </effect></Rectangle>
+            <ImageView fitHeight="206.0" fitWidth="210.0" layoutX="104.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/profile.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <Label fx:id="txtNameImg" layoutX="156.0" layoutY="374.0" prefHeight="34.0" prefWidth="114.0" text="Shamal">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="29.0" />
+               </font>
+            </Label>
+            <Label layoutX="408.0" layoutY="222.0" prefHeight="34.0" prefWidth="63.0" text="ID :">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label fx:id="txtId" layoutX="575.0" layoutY="222.0" prefHeight="34.0" prefWidth="158.0" text="E001">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="408.0" layoutY="273.0" prefHeight="34.0" prefWidth="75.0" text="Name : ">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label fx:id="txtName" layoutX="575.0" layoutY="273.0" prefHeight="34.0" prefWidth="158.0" text="Shamla">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="408.0" layoutY="325.0" prefHeight="34.0" prefWidth="114.0" text="Company :">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label fx:id="txtCompany" layoutX="574.0" layoutY="325.0" prefHeight="34.0" prefWidth="158.0" text="ABC">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="408.0" layoutY="374.0" prefHeight="34.0" prefWidth="75.0" text="Email :">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label fx:id="txtEmail" layoutX="574.0" layoutY="374.0" prefHeight="34.0" prefWidth="195.0" text="shamal@gmail.com">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="408.0" layoutY="424.0" prefHeight="34.0" prefWidth="130.0" text="Contact No :">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label fx:id="txtConNo" layoutX="574.0" layoutY="424.0" prefHeight="34.0" prefWidth="158.0" text="0769257284">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
 </AnchorPane>

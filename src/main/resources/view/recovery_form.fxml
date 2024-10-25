@@ -4,6 +4,7 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.paint.Color?>
@@ -38,12 +39,18 @@
                      </stops>
                   </LinearGradient>
                </fill>
+               <effect>
+                  <DropShadow />
+               </effect>
             </Rectangle>
          </right></BorderPane>
       <JFXTextField fx:id="txtEmail" focusColor="BLACK" labelFloat="true" layoutX="145.0" layoutY="121.0" prefHeight="35.0" prefWidth="272.0" promptText="Email" unFocusColor="#3c8962">
          <font>
             <Font name="Arial" size="19.0" />
          </font>
+         <effect>
+            <DropShadow />
+         </effect>
       </JFXTextField>
       <JFXButton layoutX="251.0" layoutY="334.0" onAction="#btnSubmitOnAction" prefHeight="39.0" prefWidth="98.0" style="-fx-background-color: #3C8962;" text="Submit" textAlignment="CENTER">
          <cursor>
@@ -52,11 +59,17 @@
          <font>
             <Font name="Arial" size="19.0" />
          </font>
+         <effect>
+            <DropShadow />
+         </effect>
       </JFXButton>
       <Label layoutX="112.0" layoutY="42.0" prefHeight="39.0" prefWidth="342.0" text="Password Recovery">
          <font>
             <Font name="Arial Rounded MT Bold" size="34.0" />
          </font>
+         <effect>
+            <DropShadow />
+         </effect>
       </Label>
       <Label layoutX="142.0" layoutY="170.0" prefHeight="50.0" prefWidth="246.0" text=" Enter the e-mail your account">
          <font>
@@ -75,6 +88,9 @@
          <font>
             <Font name="Arial" size="19.0" />
          </font>
+         <effect>
+            <DropShadow />
+         </effect>
       </JFXButton>
    </children>
 </AnchorPane>

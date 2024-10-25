@@ -5,6 +5,7 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.paint.Color?>
@@ -38,16 +39,25 @@
                </stops>
             </LinearGradient>
          </fill>
+         <effect>
+            <DropShadow />
+         </effect>
       </Rectangle>
       <JFXTextField fx:id="txtEmail" focusColor="BLACK" labelFloat="true" layoutX="161.0" layoutY="137.0" prefHeight="36.0" prefWidth="254.0" promptText="Email" unFocusColor="#3c8962">
          <font>
             <Font name="Arial" size="19.0" />
          </font>
+         <effect>
+            <DropShadow />
+         </effect>
       </JFXTextField>
       <JFXTextField fx:id="txtPassword" focusColor="BLACK" labelFloat="true" layoutX="161.0" layoutY="198.0" prefHeight="36.0" prefWidth="254.0" promptText="Password" unFocusColor="#3c8962">
          <font>
             <Font name="Arial" size="19.0" />
          </font>
+         <effect>
+            <DropShadow />
+         </effect>
       </JFXTextField>
       <JFXButton layoutX="192.0" layoutY="326.0" onAction="#btnLogInOnAction" prefHeight="39.0" prefWidth="164.0" style="-fx-background-color: #3C8962;" text="Log In" textAlignment="CENTER">
          <cursor>
@@ -56,11 +66,17 @@
          <font>
             <Font name="Arial" size="19.0" />
          </font>
+         <effect>
+            <DropShadow />
+         </effect>
       </JFXButton>
       <Label layoutX="200.0" layoutY="42.0" text="Log In">
          <font>
             <Font name="Arial Rounded MT Bold" size="50.0" />
          </font>
+         <effect>
+            <DropShadow />
+         </effect>
       </Label>
       <Hyperlink layoutX="153.0" layoutY="236.0" onAction="#lnkForgotPasswordOnAction" text="Forgot Password?">
          <font>

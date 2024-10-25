@@ -1,63 +1,55 @@
 package service.custom.impl;
 
 import dto.Login;
+import entity.EmployeeEntity;
 import entity.LoginEntity;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 import org.modelmapper.ModelMapper;
 import repository.DaoFactory;
+import repository.custom.EmployeeDao;
 import repository.custom.LoginDao;
 import service.custom.LoginService;
 import util.DaoType;
 import util.HibernateUtil;
+import util.LoginInfo;
 
 public class LoginServiceImpl implements LoginService {
 
     private LoginEntity login = null;
-    private LoginDao loginDao = DaoFactory.getInstance().getServiceType(DaoType.LOGIN);
-
-    @Override
-    public LoginEntity createLogin(String username, String password) {
-        Session session = HibernateUtil.getSession().getSessionFactory().openSession();
-        try {
-            System.out.println(username+" "+password);
-            Query<LoginEntity> query = session.createQuery("FROM loginentity WHERE email = :username AND password = :password", LoginEntity.class);
-            query.setParameter("email", username);
-            query.setParameter("password", password);
-            System.out.println(username+" "+password);
-            return query.uniqueResult(); // Return user if found, otherwise null
-        } finally {
-            session.close();
-        }
-    }
+    private final LoginDao loginDao = DaoFactory.getInstance().getServiceType(DaoType.LOGIN);
+    private final EmployeeDao employeeDao = DaoFactory.getInstance().getServiceType(DaoType.EMPLOYEE);
 
     @Override
     public boolean createLogin(Login login) {
-        LoginEntity entity = new ModelMapper().map(login, LoginEntity.class);
-        return loginDao.save(entity);
-    }
-
-    @Override
-    public LoginEntity verifyLogin(Login login) {
-        LoginEntity entity = new ModelMapper().map(login,LoginEntity.class);
-        LoginEntity search = loginDao.search(login.getEmail());
-        return (search);
-    }
-
-    @Override
-    public boolean validEmail(String email) {
-        login = loginDao.search(email);
-        if (null != login) {
-            return login.getEmail().equals(email);
+        final EmployeeEntity search = employeeDao.search(login.getUserId());
+        final String id = search == null ? null : search.getId();
+        if (null != id && id.equals(login.getUserId())) {
+            LoginEntity entity = new ModelMapper().map(login, LoginEntity.class);
+            return loginDao.save(entity);
         }else {
             return false;
         }
     }
 
     @Override
+    public boolean validEmail(String email) {
+        this.login = loginDao.search(email);
+        if (null != login) {
+            return this.login.getEmail().equals(email);
+        }else {
+            return false;
+        }
+    }
+
+    @Override
+    public Login searchLogin(String email) {
+        return new ModelMapper().map(loginDao.search(email),Login.class);
+    }
+
+    @Override
     public boolean createPassword(String password) {
-        System.out.println(this.login);
-        loginDao.search(login.getEmail());
-        return loginDao.update(new LoginEntity(login.getEmail(),password,login.getRole()));
+        this.login = loginDao.search(LoginInfo.getInstance().getEmail());
+        return loginDao.update(new LoginEntity(login.getEmail(),login.getUserId(),password));
     }
 }

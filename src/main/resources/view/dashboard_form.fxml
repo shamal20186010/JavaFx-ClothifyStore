@@ -5,6 +5,8 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
@@ -36,11 +38,17 @@
                </stops>
             </LinearGradient>
          </fill>
+         <effect>
+            <InnerShadow />
+         </effect>
       </Rectangle>
       <Label layoutX="87.0" layoutY="39.0" text="Create Account">
          <font>
             <Font name="Arial Rounded MT Bold" size="50.0" />
          </font>
+         <effect>
+            <DropShadow />
+         </effect>
       </Label>
       <JFXButton layoutX="335.0" layoutY="343.0" onAction="#btnLogInOnAction" prefHeight="36.0" prefWidth="98.0" style="-fx-background-color: #3C8962;" text="Log In" textAlignment="CENTER">
          <cursor>
@@ -54,6 +62,9 @@
          <font>
             <Font name="Arial" size="19.0" />
          </font>
+         <effect>
+            <DropShadow />
+         </effect>
       </JFXTextField>
       <JFXButton layoutX="155.0" layoutY="343.0" onAction="#btnRegisterOnAction" prefHeight="36.0" prefWidth="149.0" style="-fx-background-color: #3C8962;" text="Register" textAlignment="CENTER">
          <cursor>
@@ -67,7 +78,13 @@
          <font>
             <Font name="Arial" size="19.0" />
          </font>
+         <effect>
+            <DropShadow />
+         </effect>
       </JFXTextField>
-      <JFXComboBox fx:id="cmbPosition" focusColor="#3c8962" layoutX="155.0" layoutY="258.0" prefHeight="26.0" prefWidth="180.0" promptText="User Role" unFocusColor="#3d9c5d" />
+      <JFXComboBox fx:id="cmbPosition" focusColor="#3c8962" layoutX="155.0" layoutY="258.0" prefHeight="26.0" prefWidth="180.0" promptText="User Role" unFocusColor="#3d9c5d">
+         <effect>
+            <DropShadow />
+         </effect></JFXComboBox>
    </children>
 </AnchorPane>

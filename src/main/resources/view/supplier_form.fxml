@@ -6,11 +6,11 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
@@ -38,61 +38,103 @@
                </stops>
             </LinearGradient>
          </fill>
+         <effect>
+            <DropShadow />
+         </effect>
       </Rectangle>
       <JFXTextField fx:id="txtName" focusColor="BLACK" labelFloat="true" layoutX="74.0" layoutY="213.0" prefHeight="36.0" prefWidth="210.0" promptText="Name" unFocusColor="#3c8962">
          <font>
             <Font name="Arial" size="19.0" />
          </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.04865496978163719" green="0.2526315748691559" blue="0.07245223969221115" />
+               </color>
+            </DropShadow>
+         </effect>
       </JFXTextField>
       <JFXTextField fx:id="txtEmail" focusColor="BLACK" labelFloat="true" layoutX="333.0" layoutY="213.0" prefHeight="36.0" prefWidth="210.0" promptText="Email" unFocusColor="#3c8962">
          <font>
             <Font name="Arial" size="19.0" />
          </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.04865496978163719" green="0.2526315748691559" blue="0.07245223969221115" />
+               </color>
+            </DropShadow>
+         </effect>
       </JFXTextField>
       <JFXTextField fx:id="txtCompany" focusColor="BLACK" labelFloat="true" layoutX="74.0" layoutY="271.0" prefHeight="25.0" prefWidth="210.0" promptText="Company" unFocusColor="#3c8962">
          <font>
             <Font name="Arial" size="19.0" />
          </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.04865496978163719" green="0.2526315748691559" blue="0.07245223969221115" />
+               </color>
+            </DropShadow>
+         </effect>
       </JFXTextField>
       <JFXTextField fx:id="txtItem" focusColor="BLACK" labelFloat="true" layoutX="335.0" layoutY="271.0" prefHeight="36.0" prefWidth="210.0" promptText="Item" unFocusColor="#3c8962">
          <font>
             <Font name="Arial" size="19.0" />
          </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.04865496978163719" green="0.2526315748691559" blue="0.07245223969221115" />
+               </color>
+            </DropShadow>
+         </effect>
       </JFXTextField>
-      <TableView fx:id="tblSupplier" layoutX="27.0" layoutY="339.0" prefHeight="200.0" prefWidth="518.0">
+      <TableView fx:id="tblSupplier" layoutX="64.0" layoutY="356.0" prefHeight="200.0" prefWidth="673.0">
          <columns>
             <TableColumn fx:id="colId" prefWidth="53.0" text="ID" />
-            <TableColumn fx:id="colName" prefWidth="98.0" text="NAME" />
-            <TableColumn fx:id="colEmail" prefWidth="159.199951171875" text="EMAIL" />
-            <TableColumn fx:id="colCompany" prefWidth="93.60003662109375" text="COMPANY" />
-            <TableColumn fx:id="colItem" prefWidth="112.800048828125" text="ITEM" />
+            <TableColumn fx:id="colName" prefWidth="167.20004272460938" text="NAME" />
+            <TableColumn fx:id="colEmail" prefWidth="163.199951171875" text="EMAIL" />
+            <TableColumn fx:id="colCompany" prefWidth="168.0" text="COMPANY" />
+            <TableColumn fx:id="colItem" prefWidth="121.5999755859375" text="ITEM" />
          </columns>
+         <effect>
+            <DropShadow />
+         </effect>
       </TableView>
-      <JFXButton layoutX="583.0" layoutY="253.0" onAction="#btnAddOnAction" prefHeight="36.0" prefWidth="139.0" style="-fx-background-color: #3C8962;" text="Add" textAlignment="CENTER">
+      <JFXButton layoutX="583.0" layoutY="189.0" onAction="#btnAddOnAction" prefHeight="36.0" prefWidth="139.0" style="-fx-background-color: #3C8962;" text="Add" textAlignment="CENTER">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
          <font>
             <Font name="Arial" size="19.0" />
          </font>
+         <effect>
+            <DropShadow />
+         </effect>
       </JFXButton>
-      <JFXButton layoutX="583.0" layoutY="383.0" onAction="#btnUpdateOnAction" prefHeight="36.0" prefWidth="139.0" style="-fx-background-color: #3C8962;" text="Update" textAlignment="CENTER">
+      <JFXButton layoutX="583.0" layoutY="243.0" onAction="#btnUpdateOnAction" prefHeight="36.0" prefWidth="139.0" style="-fx-background-color: #3C8962;" text="Update" textAlignment="CENTER">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
          <font>
             <Font name="Arial" size="19.0" />
          </font>
+         <effect>
+            <DropShadow />
+         </effect>
       </JFXButton>
-      <JFXButton layoutX="583.0" layoutY="443.0" onAction="#btnDeleteOnAction" prefHeight="36.0" prefWidth="139.0" style="-fx-background-color: #3C8962;" text="Delete" textAlignment="CENTER">
+      <JFXButton layoutX="583.0" layoutY="303.0" onAction="#btnDeleteOnAction" prefHeight="36.0" prefWidth="139.0" style="-fx-background-color: #3C8962;" text="Delete" textAlignment="CENTER">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
          <font>
             <Font name="Arial" size="19.0" />
          </font>
+         <effect>
+            <DropShadow />
+         </effect>
       </JFXButton>
-      <Line endX="703.0000610351562" layoutX="97.0" layoutY="327.0" startX="-100.0" />
       <Label fx:id="lblId" layoutX="150.0" layoutY="149.0" prefHeight="23.0" prefWidth="59.0" text="ID">
          <font>
             <Font name="Arial" size="19.0" />
@@ -102,6 +144,9 @@
          <font>
             <Font name="Arial" size="19.0" />
          </font>
+         <effect>
+            <DropShadow />
+         </effect>
       </Label>
    </children>
 </AnchorPane>

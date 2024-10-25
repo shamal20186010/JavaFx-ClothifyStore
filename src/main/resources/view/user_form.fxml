@@ -3,6 +3,7 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -51,61 +52,88 @@
                            <font>
                               <Font name="Arial Rounded MT Bold" size="34.0" />
                            </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
                         </Label>
                         <Label layoutX="104.0" layoutY="44.0" prefHeight="42.0" prefWidth="82.0" text="Clothing" textFill="#4e4a3d">
                            <font>
                               <Font name="Arial Rounded MT Bold" size="19.0" />
                            </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
                         </Label>
                      </children>
                   </Pane>
                   <Line endX="156.4000244140625" endY="1.1999969482421875" startX="-94.00001525878906" strokeWidth="2.0" />
                   <JFXButton layoutX="10.0" layoutY="277.0" onAction="#btnProfileOnAction" prefHeight="60.0" prefWidth="223.0" style="-fx-background-color: CFEBDD;" text="Profile">
                      <font>
-                        <Font name="Arial" size="20.0" />
+                        <Font name="Bauhaus 93" size="20.0" />
                      </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
                   </JFXButton>
                   <Line endX="121.20001220703125" endY="1.1999969482421875" startX="-94.00001525878906" />
                   <JFXButton onAction="#btnOrderOnAction" prefHeight="58.0" prefWidth="221.0" style="-fx-background-color: CFEBDD;" text="Order">
                      <font>
-                        <Font name="Arial" size="20.0" />
+                        <Font name="Bauhaus 93" size="20.0" />
                      </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
                   </JFXButton>
                   <Line endX="121.20001220703125" endY="1.1999969482421875" startX="-94.00001525878906" />
                   <JFXButton onAction="#btnProductsOnAction" prefHeight="58.0" prefWidth="221.0" style="-fx-background-color: CFEBDD;" text="Products">
                      <font>
-                        <Font name="Arial" size="20.0" />
+                        <Font name="Bauhaus 93" size="20.0" />
                      </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
                   </JFXButton>
                   <Line endX="121.20001220703125" endY="1.1999969482421875" startX="-94.00001525878906" />
                   <JFXButton onAction="#btnSuppliersOnAction" prefHeight="58.0" prefWidth="222.0" style="-fx-background-color: CFEBDD;" text="Suppliers">
                      <font>
-                        <Font name="Arial" size="20.0" />
+                        <Font name="Bauhaus 93" size="20.0" />
                      </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
                   </JFXButton>
                   <Line endX="121.20001220703125" endY="1.1999969482421875" startX="-94.00001525878906" />
                   <JFXButton onAction="#btnReportsOnAction" prefHeight="60.0" prefWidth="223.0" style="-fx-background-color: CFEBDD;" text="Reports">
                      <font>
-                        <Font name="Arial" size="20.0" />
+                        <Font name="Bauhaus 93" size="20.0" />
                      </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
                   </JFXButton>
                   <Line endX="121.20001220703125" endY="1.1999969482421875" startX="-94.00001525878906" />
                   <Line endX="121.20001220703125" endY="1.1999969482421875" startX="-94.00001525878906" />
                   <JFXButton layoutX="10.0" layoutY="308.0" onAction="#btnLogOutOnAction" prefHeight="60.0" prefWidth="218.0" style="-fx-background-color: CFEBDD;" text="Log Out">
                      <font>
-                        <Font name="Arial" size="20.0" />
+                        <Font name="Bauhaus 93" size="20.0" />
                      </font>
                      <VBox.margin>
                         <Insets top="120.0" />
                      </VBox.margin>
+                     <effect>
+                        <DropShadow />
+                     </effect>
                   </JFXButton>
                   <Line endX="121.20001220703125" endY="1.1999969482421875" startX="-94.00001525878906" />
                   <Line endX="121.20001220703125" endY="1.1999969482421875" startX="-94.00001525878906" />
                </children>
+               <effect>
+                  <DropShadow />
+               </effect>
             </VBox>
          </left>
          <center>
-            <ImageView fitHeight="578.0" fitWidth="794.0" pickOnBounds="true" BorderPane.alignment="CENTER">
+            <ImageView fitHeight="578.0" fitWidth="794.0" opacity="0.86" pickOnBounds="true" BorderPane.alignment="CENTER">
                <image>
                   <Image url="@../assets/userMain.jpg" />
                </image>
@@ -116,11 +144,17 @@
          <font>
             <Font name="Script MT Bold" size="80.0" />
          </font>
+         <effect>
+            <DropShadow />
+         </effect>
       </Label>
       <Label fx:id="lblTitle1" layoutX="271.0" layoutY="22.0" opacity="0.45" prefHeight="115.0" prefWidth="508.0" text="Clothify " textFill="#53e49b">
          <font>
             <Font name="Segoe UI Bold Italic" size="96.0" />
          </font>
+         <effect>
+            <DropShadow />
+         </effect>
       </Label>
    </children>
 </AnchorPane>

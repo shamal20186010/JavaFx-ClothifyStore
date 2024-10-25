@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
@@ -31,7 +31,9 @@
                </stops>
             </LinearGradient>
          </fill>
+         <effect>
+            <DropShadow />
+         </effect>
       </Rectangle>
-      <ComboBox fx:id="cmbReports" layoutX="57.0" layoutY="129.0" prefHeight="51.0" prefWidth="143.0" promptText="Reports" />
    </children>
 </AnchorPane>
