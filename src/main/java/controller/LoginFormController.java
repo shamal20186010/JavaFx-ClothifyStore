@@ -3,13 +3,9 @@ package controller;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import dto.Login;
-import entity.LoginEntity;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
@@ -18,14 +14,11 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import service.ServiceFactory;
 import service.custom.LoginService;
-import service.custom.impl.LoginServiceImpl;
 import util.LoginInfo;
 import util.ServiceType;
 
 import java.io.IOException;
-import java.net.URL;
 import java.util.Optional;
-import java.util.ResourceBundle;
 
 public class LoginFormController {
 

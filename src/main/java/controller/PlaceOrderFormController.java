@@ -69,7 +69,7 @@ public class PlaceOrderFormController implements Initializable {
     private Label lblTotal;
 
     @FXML
-    private TableView<CartTM> tblEmployees;
+    private TableView<CartTM> tblOrderItem;
 
     @FXML
     private Label lblCategory;
@@ -108,7 +108,7 @@ public class PlaceOrderFormController implements Initializable {
                     Double.parseDouble(lblPrice.getText()) * Integer.parseInt(txtQty.getText())
             ));
             getNetTotal();
-            tblEmployees.setItems(cartTMS);
+            tblOrderItem.setItems(cartTMS);
             setTextToEmpty();
         }
     }
@@ -131,7 +131,7 @@ public class PlaceOrderFormController implements Initializable {
                 Double.parseDouble(lblPrice.getText()) * Integer.parseInt(txtQty.getText())
         ));
         getNetTotal();
-        tblEmployees.setItems(cartTMS);
+        tblOrderItem.setItems(cartTMS);
         setTextToEmpty();
     }
 
@@ -146,7 +146,7 @@ public class PlaceOrderFormController implements Initializable {
                 searchItems(newValue);
             }
         }));
-        tblEmployees.getSelectionModel().selectedItemProperty().addListener(((observableValue, oldValue, newValue) ->
+        tblOrderItem.getSelectionModel().selectedItemProperty().addListener(((observableValue, oldValue, newValue) ->
         {
             if (null != newValue) {
                 setTextToValues(newValue);

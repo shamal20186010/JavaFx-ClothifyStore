@@ -62,6 +62,7 @@ public class AdminUserFormController {
             throw new RuntimeException(e);
         }
     }
+
     @FXML
     void btnLogOutOnAction(ActionEvent actionEvent) {
 

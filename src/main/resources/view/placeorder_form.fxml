@@ -43,7 +43,7 @@
             <DropShadow />
          </effect>
       </Rectangle>
-      <TableView fx:id="tblEmployees" layoutX="33.0" layoutY="330.0" prefHeight="202.0" prefWidth="543.0">
+      <TableView fx:id="tblOrderItem" layoutX="33.0" layoutY="330.0" prefHeight="202.0" prefWidth="543.0">
          <columns>
             <TableColumn fx:id="colId" prefWidth="53.0" text="ID" />
             <TableColumn fx:id="colName" prefWidth="176.80001831054688" text="NAME" />

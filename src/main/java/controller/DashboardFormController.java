@@ -2,7 +2,6 @@ package controller;
 
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
-import dto.Login;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -10,11 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.stage.Stage;
-import service.ServiceFactory;
-import service.custom.LoginService;
-import util.ServiceType;
 
 import java.io.IOException;
 import java.net.URL;
@@ -40,6 +35,7 @@ public class DashboardFormController implements Initializable {
             throw new RuntimeException(e);
         }
     }
+
     private boolean hasEmptyFields() {
         return txtEmail.getText().isEmpty() || txtPassword.getText().isEmpty();
     }
